@@ -7,6 +7,9 @@ import About from "./components/About/About";
 import ContactMe from "./components/Contact/ContactMe";
 import { Route, Routes } from "react-router-dom";
 import Tutorials from "./components/Tutorials/Tutorials";
+import Resume from "./components/Resume/Resume";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 
 function App() {
 
@@ -15,7 +18,9 @@ function App() {
       <ButtonAppBar />
       <Routes>
         <Route index element={<About />} />
-        <Route path="/contact" element={<ContactMe />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/tutorials" element={<Tutorials />} />
       </Routes>
     </div>

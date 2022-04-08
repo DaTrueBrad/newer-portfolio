@@ -24,7 +24,6 @@ function FirstLanding() {
         align="center"
         color="white"
         variant="h5"
-        sx={{ marginBottom: "10px" }}
       >
         (Keep Scrolling)
       </Typography>

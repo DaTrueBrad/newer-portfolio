@@ -12,7 +12,7 @@ function ContactMe() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
 
   const handleClick = () => {
     setSuccess(true);
@@ -41,19 +41,19 @@ function ContactMe() {
       .then(
         (result) => {
           setSuccess(true);
-          setUserName("")
-          setEmail("")
-          setMessage("")
+          setUserName("");
+          setEmail("");
+          setMessage("");
         },
         (error) => {
-          setError(true)
+          setError(true);
         }
       );
   };
   return (
     <section>
-      <div className="info-container" id="center">
-        <div className="information">
+      {/* <div className="info-container" id="center"> */}
+      {/* <div className="information">
           <div>
             <Typography variant="h2" color="text.main" align="center">
               Contact Me
@@ -73,45 +73,48 @@ function ContactMe() {
             </Typography>
             <br></br>
           </div>
+        </div> */}
+      <form ref={form} onSubmit={sendEmail}>
+      <Typography variant="h2" color="background.paper" align="center">
+        Contact Me
+      </Typography>
+        <TextField
+          type="text"
+          variant="outlined"
+          onChange={(e) => setUserName(e.target.value)}
+          label="Name"
+          value={userName}
+          name="user_name"
+        />
+        <TextField
+          type="email"
+          name="user_email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          variant="outlined"
+          label="Email"
+        />
+        <TextField
+          type="text"
+          variant="outlined"
+          onChange={(e) => setMessage(e.target.value)}
+          name="message"
+          multiline
+          value={message}
+          minRows={8}
+          maxRows={8}
+          label="Message"
+        />
+        <Button type="submit" variant="contained">
+          Send
+        </Button>
+        <div className="row-container">
+          <a href="https://www.facebook.com/bottbrady/" target="_blank"><FacebookIcon sx={{ color: "#1778F2", fontSize: "66px" }} /></a>
+          <a href="https://www.instagram.com/bottbrady/" target="_blank"><InstagramIcon sx={{ color: "#C0007A", fontSize: "66px" }} /></a>
+          <a href="https://www.linkedin.com/in/bradybott/" target="_blank"><LinkedInIcon sx={{ color: "#0077b5", fontSize: "66px" }} /></a>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
-          <TextField
-            type="text"
-            variant="outlined"
-            onChange={(e) => setUserName(e.target.value)}
-            label="Name"
-            value={userName}
-            name="user_name"
-          />
-          <TextField
-            type="email"
-            name="user_email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            variant="outlined"
-            label="Email"
-          />
-          <TextField
-            type="text"
-            variant="outlined"
-            onChange={(e) => setMessage(e.target.value)}
-            name="message"
-            multiline
-            value={message}
-            minRows={8}
-            maxRows={8}
-            label="Message"
-          />
-          <Button type="submit" variant="contained">
-            Send
-          </Button>
-          <div className="row-container">
-            <FacebookIcon sx={{ color: "#1778F2", fontSize: "66px" }} />
-            <InstagramIcon sx={{ color: "#C0007A", fontSize: "66px" }} />
-            <LinkedInIcon sx={{ color: "#0077b5", fontSize: "66px" }} />
-          </div>
-        </form>
-      </div>
+      </form>
+      {/* </div> */}
       <Snackbar open={success} autoHideDuration={6000}>
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           Message sent Successfully!

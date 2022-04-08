@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tab } from "@mui/material";
-import { TabContext, TabList } from "@mui/lab";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
 import VideoPage from "./VideoPage";
 
 function Learning() {
