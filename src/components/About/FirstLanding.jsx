@@ -10,7 +10,11 @@ function FirstLanding() {
         align="center"
         color="white"
         variant="h1"
-        sx={{ marginBottom: "10px" }}
+        sx={{ marginBottom: "10px", fontSize: {
+          xs: "4em",
+          sm: "5em",
+          md: "6em"
+        } }}
       >
         Hi,<br></br>I'm <Typography variant="span" color="primary.main">
            Brady

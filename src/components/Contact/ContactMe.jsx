@@ -51,7 +51,7 @@ function ContactMe() {
       );
   };
   return (
-    <section>
+    <section className="regular-page">
       {/* <div className="info-container" id="center"> */}
       {/* <div className="information">
           <div>

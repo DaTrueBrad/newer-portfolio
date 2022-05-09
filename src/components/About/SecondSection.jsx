@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import brady from "../../assets/Brady.jpg";
+import brady from "../../assets/Brady_head.jpg";
 import { images } from "../../assets/imagesList";
 
 function SecondSection() {
@@ -23,7 +23,7 @@ function SecondSection() {
               I spend my day coding with students or coding on personal projects. Outside of code, I exercise, hike, read, and play games!
             </Typography>
           </div>
-          <div className="images-container">
+          {/* <div className="images-container">
             {images.map((image, index) => {
               return (
                 <div className="image-card" key={index}>
@@ -34,7 +34,7 @@ function SecondSection() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

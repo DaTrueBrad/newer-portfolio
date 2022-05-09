@@ -12,7 +12,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 
 function App() {
-
+  console.log("hello")
   return (
     <div className="App">
       <ButtonAppBar />

@@ -5,7 +5,11 @@ import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 function ProjectsLanding() {
   return (
     <section className='landing'>
-    <Typography variant="h1" color="text.main" align="center">These<br></br> are my <Typography variant="span" color="primary.main">
+    <Typography variant="h1" color="text.main" align="center" sx={{fontSize: {
+          xs: "4em",
+          sm: "5em",
+          md: "6em"
+        }}}>These<br></br> are my <Typography variant="span" color="primary.main">
          Projects
       </Typography></Typography>
       <br></br>
